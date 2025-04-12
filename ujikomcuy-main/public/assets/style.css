@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: #f8f9fa;
+    color: #212529;
+}
+
+/* Navbar */
+.navbar {
+    height: 60px;
+    background-color: #008cff;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 240px;
+    background-color: #173f5f;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+.sidebar-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 20px 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#sidebar.hide {
+    width: 0;
+    padding: 0;
+}
+
+/* Link di sidebar */
+#sidebar .nav-link {
+    padding: 12px 20px;
+    color: #f8f9fa;
+    display: block;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+#sidebar .nav-link:hover, #sidebar .nav-link.active {
+    background-color: #3caea3;
+    color: #fff;
+}
+
+/* Konten utama */
+.content {
+    margin-top: 70px;
+    margin-left: 260px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.content.full-width {
+    margin-left: 60px;
+}
+
+/* Tabel */
+.table {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background: #20639b;
+    color: white;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/* Tombol */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background: #3caea3;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #38a39b;
+}
+
+.btn-warning {
+    background: #f6d55c;
+    border: none;
+    color: #173f5f;
+}
+
+.btn-warning:hover {
+    background: #f3c74f;
+}
+
+.btn-danger {
+    background: #ed553b;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #e64a2e;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.form-control {
+    border-radius: 6px;
+    border-color: #ced4da;
+}
+
+.form-control:focus {
+    border-color: #3caea3;
+    box-shadow: 0 0 0 0.2rem rgba(60, 174, 163, 0.25);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #f8f9fa;
+    text-align: center;
+ padding: 10px;
+    font-size: 14px;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+    
+    .content {
+        margin-left: 210px;
+    }
+    
+    #sidebar.hide {
+        width: 0;
+    }
+    
+    .content.full-width {
+        margin-left: 0;
+    }
+}
+
+/* #searchSupplier {
+    max-width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+} */
